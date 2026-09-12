@@ -1,0 +1,257 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Helvetica Neue",
+        Arial,
+        sans-serif;
+
+    background: #f5f5f5;
+}
+
+.app {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+}
+
+
+/* 顶部 */
+
+.topbar {
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px 15px;
+
+    border-bottom: 1px solid #eee;
+
+    background: #fff;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ddd;
+
+    font-size: 18px;
+}
+
+.character-info {
+    flex: 1;
+
+    margin-left: 10px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.status {
+    font-size: 12px;
+    color: #999;
+
+    margin-top: 3px;
+}
+
+.settings-btn {
+    border: none;
+    background: transparent;
+
+    font-size: 22px;
+}
+
+
+/* 聊天 */
+
+.chat {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px 14px 90px;
+}
+
+.message {
+    display: flex;
+
+    margin-bottom: 14px;
+}
+
+.message.ai {
+    justify-content: flex-start;
+}
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.bubble {
+    max-width: 78%;
+
+    padding: 11px 14px;
+
+    border-radius: 16px;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+}
+
+.ai .bubble {
+    background: #f0f0f0;
+}
+
+.user .bubble {
+    background: #222;
+    color: white;
+}
+
+
+/* 输入框 */
+
+.input-area {
+    position: fixed;
+
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+
+    background: white;
+
+    border-top: 1px solid #eee;
+}
+
+.input-area input {
+    flex: 1;
+
+    height: 46px;
+
+    border: none;
+
+    background: #f4f4f4;
+
+    border-radius: 24px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.input-area button {
+    width: 46px;
+    height: 46px;
+
+    margin-left: 8px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 20px;
+}
+
+
+/* 设置 */
+
+.settings {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.4);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.settings-box {
+    width: 100%;
+    max-width: 400px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 20px;
+}
+
+.settings-box input,
+.settings-box textarea {
+    width: 100%;
+
+    margin: 8px 0 16px;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+.settings-box textarea {
+    min-height: 120px;
+}
+
+.settings-box button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #222;
+
+    color: white;
+
+    margin-top: 5px;
+}
+
+.settings-box .cancel {
+    background: #eee;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
